@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
-import QuestionCard from '../components/QuestionCard.tsx'
+import styles from './index.module.scss'
+
 const List: FC = () => {
   return (
     <>
-      <QuestionCard></QuestionCard>
+      <div className={styles.index}></div>
     </>
   )
 }
