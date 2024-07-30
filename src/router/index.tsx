@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import Main from '../layout/Main.tsx'
 import Manage from '../layout/Manage.tsx'
-// import Question from '../layout/Question.tsx'
+import Question from '../layout/Question.tsx'
 import Login from '../pages/auth/login/Login.tsx'
 import Register from '../pages/auth/register/Register.tsx'
 import NotFound from '../pages/auth/404/NotFound.tsx'
@@ -30,29 +30,29 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register />,
       },
+    ],
+  },
+  {
+    path: '/manage',
+    element: <Manage />,
+    children: [
       {
-        path: '/manage',
-        element: <Manage />,
-        children: [
-          {
-            path: '/manage/list',
-            element: <List />,
-          },
-          {
-            path: '/manage/star',
-            element: <Star />,
-          },
-          {
-            path: '/manage/trash',
-            element: <Trash />,
-          },
-        ],
+        path: '/manage/list',
+        element: <List />,
       },
       {
-        path: '/question/edit/:id',
-        element: <Edit />,
+        path: '/manage/star',
+        element: <Star />,
+      },
+      {
+        path: '/manage/trash',
+        element: <Trash />,
       },
     ],
+  },
+  {
+    path: '/question/edit/:id',
+    element: <Edit />,
   },
   {
     path: '*',

@@ -1,10 +1,21 @@
 import React, { FC } from 'react'
-import styles from './index.module.scss'
+import { Button, Result } from 'antd'
+import { useNavigate } from 'react-router-dom'
 
 const NotFound: FC = () => {
+  const nav = useNavigate()
   return (
     <>
-      <div className={styles.index}></div>
+      <Result
+        status="404"
+        title="404"
+        subTitle="Sorry, the page you visited does not exist."
+        extra={
+          <Button type="primary" onClick={() => nav(-1)}>
+            Back Home
+          </Button>
+        }
+      />
     </>
   )
 }

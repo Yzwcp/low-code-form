@@ -1,0 +1,27 @@
+.header {
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.main {
+  min-height: calc(100vh - 64px - 65px);
+  .container {
+    width: 1280px;
+    margin: 0px auto;
+    display: flex;
+    padding: 30px;
+    .left {
+      width: 300px;
+    }
+    .right {
+      flex: 1;
+      background: #999999;
+    }
+  }
+}
+.footer {
+  text-align: center;
+  background: #999999;
+  border-top: 1px solid #e8e8e8;
+}

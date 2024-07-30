@@ -1,3 +1,7 @@
 .index {
-  background: #fff;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px - 65px);
 }
